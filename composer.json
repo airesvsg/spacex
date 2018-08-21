@@ -1,0 +1,21 @@
+{
+    "name": "airesvsg/spacex",
+    "description": "SpaceX API Wrapper for PHP",
+    "type": "library",
+    "version": "1.0",
+    "keywords": ["spacex", "rest", "api", "wrapper", "php"],
+    "homepage": "https://github.com/airesvsg/spacex",
+    "license": "MIT",
+    "require": {
+        "rmccue/requests": "^1.7"
+    },
+    "authors": [
+        {
+            "name": "Aires Gonçalves",
+            "email": "airesvsg@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": ["autoload.php"]
+    }
+}
