@@ -2,7 +2,7 @@
     "name": "airesvsg/spacex",
     "description": "SpaceX API Wrapper for PHP",
     "type": "library",
-    "version": "1.0",
+    "version": "1.1.0",
     "keywords": ["spacex", "rest", "api", "wrapper", "php"],
     "homepage": "https://github.com/airesvsg/spacex",
     "license": "MIT",

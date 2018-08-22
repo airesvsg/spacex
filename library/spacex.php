@@ -9,7 +9,7 @@ class SpaceX {
 		$class = strtolower($class);
 		$class = explode('\\', $class);
 		$class = end($class);
-		if (file_exists(dirname(__FILE__) . '/' . $class . '.php')) {
+		if(file_exists(dirname(__FILE__) . '/' . $class . '.php')) {
 			require_once(dirname(__FILE__) . '/' . $class . '.php');
 		}
 	}
@@ -27,6 +27,6 @@ class SpaceX {
 	}
 
 	public function __isset($name) {
-		return isset( $this->classes[$name]);
+		return isset($this->classes[$name]);
 	}
 }

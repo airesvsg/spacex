@@ -9,7 +9,7 @@ class Base {
 	public static function get($endpoint, $params=array()) {
 		$url = self::$base_url . '/' . self::$version . '/' . $endpoint;
 		
-		if (!empty($params)) {
+		if(!empty($params)) {
 			if(is_string($params)) {
 				$url .= '/' . $params;
 			} else {
@@ -19,7 +19,7 @@ class Base {
 
 		$result = \Requests::get($url, array('Accept' => 'application/json'));
 
-		if ( 200 === $result->status_code ) {
+		if(200 === $result->status_code) {
 			return json_decode($result->body);
 		}
 
