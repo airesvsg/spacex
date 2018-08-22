@@ -3,7 +3,7 @@
 namespace SpaceX;
 
 class SpaceX {
-	protected $classes = array('Capsules', 'Info', 'Launches', 'Launchpads', 'Parts', 'Rockets');
+	protected static $classes = array('Capsules', 'Info', 'Launches', 'Launchpads', 'Parts', 'Rockets');
 
 	public static function autoloader($class) {
 		$class = strtolower($class);
@@ -20,13 +20,13 @@ class SpaceX {
 
 	public function __get($name) {
 		$name = ucfirst($name);
-		if(in_array($name, $this->classes)) {
+		if(in_array($name, self::$classes)) {
 			$class = __NAMESPACE__ . '\\' . $name;
 			return new $class;
 		}
 	}
 
 	public function __isset($name) {
-		return isset($this->classes[$name]);
+		return isset(self::$classes[$name]);
 	}
 }
